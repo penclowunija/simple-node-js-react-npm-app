@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label 'default-docker'
-    }
+    agent none
      stages {
         stage('Docker node test') {
           agent {
