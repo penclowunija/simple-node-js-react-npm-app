@@ -3,7 +3,6 @@ pipeline {
      stages {
         stage('Docker node test') {
           agent {
-            docker {
               // Set both label and image
               image 'node:7-alpine'
               args '--name docker-node' // list any args
@@ -17,7 +16,6 @@ pipeline {
 
         stage('Docker maven test') {
           agent {
-            docker {
               // Set both label and image
               image 'maven:3-alpine'
             }
